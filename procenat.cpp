@@ -2,17 +2,20 @@
 using namespace std;
 float procenat(int);
 bool prost(int);
+
 int main() {
+    srand((unsigned int) time(NULL));
+    
     int n;
     do {
         cout << "Unesite broj n: ";
         cin >> n;
     } while(n < 10 || n > 1000);
 
-    cout << "Procenat: " << procenat(n);
-
+    cout << "Procenat: " << procenat(n) << " %" << endl;
     return 0;
 }
+
 bool prost(int broj) {
     if(broj <= 1)
         return false;
@@ -24,11 +27,12 @@ bool prost(int broj) {
 
     return true;
 }
+
 float procenat(int n) {
     int randBr, brojac = 0;
     for(int i = 1; i <= n; i++) {
         randBr = rand() % 1000 + 1;
-        cout << i << ". " << " " << randBr << ((prost(randBr)) ? " - Prost je" : " - Nije prost") << endl;
+      //  cout << endl << i << ". " << " " << randBr << ((prost(randBr)) ? " - Prost je" : " - Nije prost") << endl;
         if(prost(randBr))
             brojac++;
     }
