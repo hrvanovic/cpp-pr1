@@ -13,7 +13,9 @@ int main() {
 }
 
 int izracunaj(int broj, int eksponent) {
-    if(eksponent <= 1)
+    if(eksponent == 0)
+        return 1;
+    if(eksponent == 1)
         return broj;
     return broj * izracunaj(broj, eksponent - 1);
 }
