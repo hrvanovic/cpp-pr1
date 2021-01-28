@@ -3,7 +3,7 @@ using namespace std;
 // fibonacci sa rekurzijom.
 void ispuni(int*, int);
 void ispis(int*, int);
-int fibonacci(int, int);
+int fibonacci(int);
 int main() {
     int velicinaNiza;
     cout << "Unesite velicinu niza: ";
@@ -21,11 +21,11 @@ void ispis(int* niz, int max) {
 }
 void ispuni(int* niz, int vel) {
     for(int i = 0; i < vel; i++)
-        *(niz + i) = fibonacci(i, vel);
+        *(niz + i) = fibonacci(i);
 }
 
-int fibonacci(int index, int max) {
+int fibonacci(int index) {
     if(index <= 1)
         return 1;
-    return fibonacci(index - 1, max) + fibonacci(index - 2, max);
+    return fibonacci(index - 1) + fibonacci(index - 2);
 }
