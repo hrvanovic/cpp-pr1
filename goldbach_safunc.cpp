@@ -9,6 +9,7 @@ void goldbach(int);
 int main() {
     int n1, n2;
     autoUnos(n1, n2);
+    cout << "n1 = " << n1 << ", n2 = " << n2 << endl;
     ispis(n1, n2);
     return 0;
 }
