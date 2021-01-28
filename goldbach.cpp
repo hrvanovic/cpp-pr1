@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-
+// primjer goldbacha. Ovaj kod je lose optimiziran, imate jos jedan u folderu sa funkcijama.
 bool isProst(int);
 void autoUnos(int&, int&);
 
